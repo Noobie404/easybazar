@@ -1,0 +1,60 @@
+
+
+BOOKING_STATUS FOR SLS_BOOKING_DETAILS
+10 - Ordered,
+20 - Cancel request
+30 - Cancelled
+50 - Confirmed
+70 - Ready to Dispatch
+80 - Dispatched/order picked by delivery man
+85 - Shipped --order picked by delivery man
+90 - Delivered
+100 - Customer Acknowladged
+110 - Customer Returned
+
+
+
+
+
+  IS_RETURN FOR SLS_BOOKING_DETAILS
+
+
+  NULL - nothing
+  0 - Return Requested
+  1 - Return Request Accepted
+  2 - Partial Return
+
+
+
+SLS_DELIVERY_HISTORY
+
+0 - Not delivered
+10 - Delivered
+20 - Canceled
+
+
+
+DISPATCH_STATUS FOR SLS_BOOKING_DETAILS
+0 - Not Dispatched
+10 - Partially Dispatched
+40 - Fully Dispatched
+
+
+INV_STOCK FOR BOOKING_STATUS
+0 - not booked
+10 - Booked
+20 - Expired(After Booking time)
+30 - Extended
+40 - Extended Expired(After Extention Period => booking cancel & product free)
+50 - Confirmed
+60 - Payment Made/Reconfirmed
+70 - Payment Verified
+80 - Ordered
+90 - Cancelled
+100 - Booking Life Cycle Complete
+
+
+
+
+We are still processing your payment, please check your order later in My order.
+ 

@@ -1,0 +1,106 @@
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <td><strong>Parial Damage</strong></td>
+             <td><strong>Sellable</strong></td>
+             <td>
+                <table class="table opt_tbl">
+                    <tr>
+                        <td style="width: 20%">Partial discount to customer</td>
+                        <td style="width: 20%">N/A</td>
+                        <td style="width: 20%">N/A</td>
+                        <td style="width: 15%">N/A</td>
+                        <td style="width: 20%">Refund discount amount</td>
+                        <td style="width: 5%" class="text-center"><input type="radio" class="return_type" name="stock_condition" value="5" /></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%">Return</td>
+                        <td style="width: 20%">Revert Sales commission</td>
+                        <td style="width: 20%">Return to stock</td>
+                        <td style="width: 15%">Return postage</td>
+                        <td style="width: 20%">Full refund + postage</td>
+                        <td style="width: 5%" class="text-center"><input type="radio" class="return_type" name="stock_condition" value="2" /></td>
+                    </tr>
+                </table>
+             </td>
+        </tr>
+        <tr>
+            <td> <strong>Damage</strong></td>
+             <td><strong>No Sellable</strong></td>
+             <td>
+                <table class="table opt_tbl">
+                    <tr>
+                        <td style="width: 20%">Customer will dispose</td>
+                        <td style="width: 20%">Revert sales commission</td>
+                        <td style="width: 20%">N/A</td>
+                        <td style="width: 15%">N/A</td>
+                        <td style="width: 20%">Refund full</td>
+                        <td style="width: 5%" class="text-center"><input type="radio" class="return_type" name="stock_condition" value="3" /></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%">Return</td>
+                        <td style="width: 20%">Revert Sales commission</td>
+                        <td style="width: 20%">N/A</td>
+                        <td style="width: 15%">Return postage</td>
+                        <td style="width: 20%">Full refund + postage</td>
+                        <td style="width: 5%" class="text-center"><input type="radio" class="return_type" name="stock_condition" value="6" /></td>
+                    </tr>
+                </table>
+             </td>
+        </tr>
+
+        <tr>
+            <td><strong>Good</strong></td>
+             <td><strong>Sellable</strong></td>
+             <td>
+                <table class="table opt_tbl">
+                    <tr>
+                        <td style="width: 20%">Return (wrong item sent)</td>
+                        <td style="width: 20%">Revert Sales commission</td>
+                        <td style="width: 20%">Return to stock</td>
+                        <td style="width: 15%">Return postage</td>
+                        <td style="width: 20%">Full refund + postage</td>
+                        <td style="width: 5%" class="text-center"><input type="radio" class="return_type" name="stock_condition" value="1" /></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%">Return (Change min)</td>
+                        <td style="width: 20%">N/A </td>
+                        <td style="width: 20%">Return to stock</td>
+                        <td style="width: 15%">N/A</td>
+                        <td style="width: 20%">Partial refund penalty</td>
+                        <td style="width: 5%" class="text-center"><input type="radio" class="return_type" name="stock_condition" value="4" /></td>
+                    </tr>
+                </table>
+             </td>
+        </tr>
+
+
+
+
+    </tbody>
+  </table>
+
+<!--
+<div class="form-group {!! $errors->has('stock_condition') ? 'error' : '' !!}">
+    <label>Product Condition<span class="text-danger">*</span></label>
+    <div class="controls">
+        <select class="form-control" name="stock_condition" id="stock_condition" data-validation-required-message="This field is required" tabindex="1">
+            <option value="3">Bad Condition - Item(s) Damage Non-Saleable- Full refund, sales commission revert.</option>
+            <option value="5">Bad Condition - Item(s) Partial Damage Saleable- Partial refund/Discount</option>
+            <option value="2">Bad Condition - Item(s) Partial Damage Saleable- Return to warehouse, full refund, sales commission revert, and need to pay return postage.</option>
+            <option value="1">Good Condition - Wrong items send- Return to warehouse, full refund, sales commission revert, and need to pay return postage.</option>
+            <option value="4">Good Condition - Right item(s) customer change of mind- Return to warehouse, Partial refund (penalty)</option>
+        </select>
+
+        {!! $errors->first('payment_acc_no', '<label class="help-block text-danger">:message</label>') !!}
+    </div>
+</div>
+  -->
+
+
+$(document).ready(function(){
+$(document).on('click', "input[type='radio'].return_type",function(){
+var radioValue = $("input[name='stock_condition']:checked").val();
+stockConditionStup(radioValue);
+});
+});
